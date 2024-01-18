@@ -1,10 +1,10 @@
 import './button.css'
-const mensage = ()=>{
-    alert("A label desse botão é Baixar Cv")
+const message = (props)=>{
+    alert(`A label desse botão é ${props}`)
 }
 
 const Button = (props) =>{
-    return <button className="botao" onClick={mensage}>{props.label}</button>
+    return <button className="botao" onClick={() => message('Baixar CV')}>{props.label}</button>
 }
 
 Button.defaultProps = {
